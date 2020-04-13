@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1280.0" style="-fx-background-color: #4CAFFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main_Classes.Login">
+   <HBox alignment="CENTER" prefHeight="30.0" prefWidth="1280.0">
+      <children>
+         <Label text="Current Time:   " textFill="WHITE">
+            <font>
+               <Font name="Segoe UI Light" size="14.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblTime" text="Label" textFill="WHITE">
+            <font>
+               <Font name="Segoe UI Light" size="14.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+    <AnchorPane layoutY="30.0" prefHeight="650.0" prefWidth="1280.0" style="-fx-background-color: #18191c;">
+        <ImageView blendMode="SRC_ATOP" fitHeight="290.0" fitWidth="290.0" layoutX="495.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Styling/Images/SRCLogo.png" />
+        </ImageView>
+        <Label layoutX="460.0" layoutY="254.0" style="-fx-text-fill: white; -fx-font-size: 35; -fx-font-family: Segoe UI;" text="Simply Rugby Manager" />
+        <JFXTextField fx:id="txtUsername" alignment="CENTER" focusColor="#008cff" layoutX="430.0" layoutY="382.0" prefHeight="40.0" prefWidth="420.0" promptText=" Enter Username" style="-fx-background-color: #1c1d20; -fx-text-fill: white; -fx-prompt-text-fill: white; -fx-background-radius: 0;" unFocusColor="WHITE">
+            <font>
+                <Font name="Segoe UI" size="17.0" />
+            </font>
+            <effect>
+                <DropShadow />
+            </effect>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </JFXTextField>
+        <JFXTextField fx:id="txtPassword" alignment="CENTER" focusColor="#008cff" layoutX="430.0" layoutY="434.0" prefHeight="40.0" prefWidth="420.0" promptText=" Enter Password" style="-fx-background-color: #1c1d20; -fx-prompt-text-fill: white; -fx-background-radius: 0; -fx-text-fill: white;" unFocusColor="WHITE">
+            <font>
+                <Font name="Segoe UI" size="17.0" />
+            </font>
+            <effect>
+                <DropShadow />
+            </effect>
+        </JFXTextField>
+        <Label fx:id="lblInvalidLogin" layoutX="569.0" layoutY="325.0" style="-fx-text-fill: #c61111;" text="Invalid Login!" visible="false">
+            <font>
+                <Font name="Segoe UI" size="24.0" />
+            </font>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Label>
+        <JFXButton layoutX="743.0" layoutY="496.0" onAction="#login" prefHeight="36.0" prefWidth="107.0" style="-fx-background-color: #008CFF; -fx-background-radius: 0;" text="Login" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI" size="15.0" />
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="119.0" fitWidth="107.0" layoutX="1162.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Styling/Images/ScottishRungyLogo.png" />
+        </ImageView>
+    </AnchorPane>
+    <JFXButton layoutX="1233.0" minHeight="-Infinity" onAction="#exitProgram" prefHeight="30.0" prefWidth="50.0" style="-fx-background-radius: 0; -fx-text-fill: white;" text="X" />
+</AnchorPane>
